@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/redmond/jquery-ui.css" rel="stylesheet" type="text/css"/>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+  
+  <script>
+  $(document).ready(function() {
+    $.ajax({
+		type: 'GET',
+		data: "data=srivathsa",
+		url: "ajax.php",
+		success: function(data){
+			if (data != ''){
+				alert(data);
+				$("#dialog").html(data);
+			}
+		}
+	});
+  });
+  </script>
+</head>
+<body style="font-size:62.5%;">
+  
+<div id="dialog" title="Dialog Title"></div>
+
+</body>
+</html>
